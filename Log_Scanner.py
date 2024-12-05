@@ -2,7 +2,19 @@ import sys
 import pandas as pd
 
 def count_Request(file):
-    pass
+    counter = {}
+    with open(file, 'r') as sample:
+        data = sample.readlines()
+        for log in data:
+            log = list(log.split(" "))
+            if log[0] in counter:
+                counter[log[0]] += 1
+            else:
+                counter[log[0]] = 1
+
+    counter_DataFrame = pd.DataFrame([[ip, counter[ip]] for ip in counter], columns=['IP Address', 'Request Count'])
+
+    return counter_DataFrame
 
 def frequently_Accessed_Endpoint(file):
     pass
