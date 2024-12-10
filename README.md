@@ -20,6 +20,9 @@ This Python-based log analyzer processes web server logs to extract valuable ins
    ```bash
    git clone https://github.com/yourusername/log-analyzer.git
    cd log-analyzer
+
+---
+
 ## **Usage**  
 
 1. **Command Format:**  
@@ -32,6 +35,8 @@ This Python-based log analyzer processes web server logs to extract valuable ins
 - `-f` or `--F` : Identify the most frequently accessed endpoint  
 - `-s` or `--S` : Detect suspicious activity (failed logins)  
 - `-c` or `--C` : Generate a CSV report
+
+---
 
 ### **Example Commands:**  
 
@@ -50,6 +55,8 @@ This Python-based log analyzer processes web server logs to extract valuable ins
 - **Generate a CSV report:**
   ```bash
   python Log_Scanner.py ./sample.log -c
+
+---
 
 ### **CSV Output Format:**  
 The CSV file `log_analysis_results.csv` includes:
